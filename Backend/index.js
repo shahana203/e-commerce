@@ -16,7 +16,6 @@ connectDB();
 connectCloudinary();
 
 // middleware
-const cors = require('cors');
 
 const allowedOrigins = [
   'https://e-commerce-admin-lc3xnl75u-shahana203s-projects.vercel.app',
