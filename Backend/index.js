@@ -16,18 +16,28 @@ connectDB();
 connectCloudinary();
 
 // middleware
-const corsOptions = {
-    origin: ['https://e-commerce-admin-lc3xnl75u-shahana203s-projects.vercel.app',
+const cors = require('cors');
 
-       "https://e-commerce-frontend-qwi1cvjwb-shahana203s-projects.vercel.app"
-    ],
-    // Frontend URL
-    methods: 'GET,POST,PUT,DELETE',
-    allowedHeaders: 'Content-Type,Authorization',
-    credentials: true, // If you're using cookies or JWT for authentication
-  };
-  
-  app.use(cors(corsOptions));
+const allowedOrigins = [
+  'https://e-commerce-admin-lc3xnl75u-shahana203s-projects.vercel.app',
+  'https://e-commerce-frontend-nine-ruddy.vercel.app'
+];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: 'GET,POST,PUT,DELETE',
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // handle preflight requests
+
 // app.use(cors());
 
 
