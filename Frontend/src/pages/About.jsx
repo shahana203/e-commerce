@@ -27,17 +27,17 @@ const About = () => {
          <div className='flex flex-col md:flex-row text-sm mb-20'>
           <div className='border border-gray-400 px-10 md:px-20 py-8 sm:py-20 flex flex-col gap-5'>
          <b>Quality Assurance: </b>
-         <p clasName='text-gray-600' >we are committed to delivering only the highest quality electronic products to our customers. From the latest gadgets to everyday tech essentials, our products go through strict quality checks to ensure performance, safety, and durability.</p>
+         <p className='text-gray-600' >we are committed to delivering only the highest quality electronic products to our customers. From the latest gadgets to everyday tech essentials, our products go through strict quality checks to ensure performance, safety, and durability.</p>
           </div>
 
           <div className='border border-gray-400 px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5'>
          <b>Convenience: </b>
-         <p clasName='text-gray-600' >we prioritize your time and comfort. Our platform is designed to make shopping simple — from a clean, easy-to-navigate interface to fast search and secure checkout.  With quick delivery options and real-time order tracking, we bring convenience right to your doorstep.</p>
+         <p className='text-gray-600' >we prioritize your time and comfort. Our platform is designed to make shopping simple — from a clean, easy-to-navigate interface to fast search and secure checkout.  With quick delivery options and real-time order tracking, we bring convenience right to your doorstep.</p>
           </div>
 
           <div className='border border-gray-400 px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5'>
          <b>Exceptional Customer Service: </b>
-         <p clasName='text-gray-600  ' >Our friendly and knowledgeable customer service team is always ready to assist you — whether you have questions before purchase or need help after.  ensuring a smooth and satisfying experience every time you shop with us.
+         <p className='text-gray-600  ' >Our friendly and knowledgeable customer service team is always ready to assist you — whether you have questions before purchase or need help after.  ensuring a smooth and satisfying experience every time you shop with us.
 
 </p>
           </div>

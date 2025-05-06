@@ -8,14 +8,17 @@ import NewsLetter from '../components/NewsLetter'
 
 const Home = () => {
   return (
+    
+    
     <div>
-      
+       
       <Hero />
       <LatestCollection />
       <PopularProducts />
       <OurPolicy />
       <NewsLetter />
     </div>
+  
   )
 }
 

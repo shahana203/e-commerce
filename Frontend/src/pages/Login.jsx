@@ -52,7 +52,9 @@ const Login = () => {
   useEffect(() => {
     if (token) {
       navigate('/');
+      
     }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [token]);
 
   return (

@@ -36,10 +36,7 @@ const Cart = () => {
 
     }
 
-
-
-
-  }, [cartItems, products])
+}, [cartItems, products])
 
   return (
     <div className='border-t pt-14'>
