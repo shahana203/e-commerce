@@ -4,6 +4,7 @@ import { ShopContext } from '../context/Shopcontext'
 import { assets } from '../assets/assets';
 import RelatedProducts from '../components/RelatedProducts';
 import { useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
 
 
 const Product = () => {
@@ -18,6 +19,7 @@ const Product = () => {
 
   const handleAddToCart = () => {
     if (!token) {
+      toast.error('Please login first to add items to cart')
       
       navigate('/login', { state: { from: 'cart' } });
       
