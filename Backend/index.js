@@ -16,7 +16,21 @@ connectDB();
 connectCloudinary();
 
 // middleware
-app.use(cors());
+const corsOptions = {
+    origin: ['https://e-commerce-admin-lc3xnl75u-shahana203s-projects.vercel.app',
+
+       "https://e-commerce-frontend-qwi1cvjwb-shahana203s-projects.vercel.app"
+    ],
+    // Frontend URL
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization',
+    credentials: true, // If you're using cookies or JWT for authentication
+  };
+  
+  app.use(cors(corsOptions));
+// app.use(cors());
+
+
 app.use(express.json());
 
 
