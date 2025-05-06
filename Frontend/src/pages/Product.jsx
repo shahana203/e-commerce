@@ -19,7 +19,7 @@ const Product = () => {
   const handleAddToCart = () => {
     if (!token) {
       
-        navigate('/login');
+      navigate('/login', { state: { from: 'cart' } });
       
     } else {
       addToCart(productData._id, selectedColor);
