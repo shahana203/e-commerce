@@ -5,7 +5,7 @@ import { assets } from '../assets/assets';
 import RelatedProducts from '../components/RelatedProducts';
 import { useNavigate } from 'react-router-dom';
 import { toast } from "react-toastify";
-
+import { useLocation } from 'react-router-dom';
 
 const Product = () => {
  
@@ -14,21 +14,23 @@ const Product = () => {
   const[productData,setProductData] =useState(false);
   const [image,setImage]=useState('')
   const [selectedColor, setSelectedColor] = useState(null);
-
+  
   const navigate = useNavigate();
 
-  const handleAddToCart = () => {
-    if (!token) {
-      toast.error('Please login first to add items to cart')
-      
-      navigate('/login', { state: { from: 'cart' } });
-      
-    } else {
-      addToCart(productData._id, selectedColor);
-    }
-  };
-  
-  
+
+
+   // if login
+
+const location = useLocation();
+
+const handleAddToCart = () => {
+  if (!token) {
+    navigate('/login', { state: { from: 'cart' } });
+  } else {
+    addToCart(productData._id, selectedColor);
+  }
+};
+
 
 
   const fetchProductData = async () => {
@@ -104,7 +106,7 @@ const Product = () => {
           </div>
 
         </div>
-         <button    onClick={handleAddToCart}className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700 cursor-pointer'>ADD TO CART</button>
+         <button onClick={handleAddToCart}className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700 cursor-pointer'>ADD TO CART</button>
         <hr className='mt-8 sm:w-4/5  border-gray-300' />
         <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
           <p>100% original product.</p>
