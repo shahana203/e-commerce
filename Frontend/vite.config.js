@@ -7,6 +7,9 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss()],
     base: "/e-commerce/", 
+    build: {
+      outDir: 'dist',
+    },
     server:{port:5173}
   
 })
