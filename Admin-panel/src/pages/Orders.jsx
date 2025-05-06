@@ -20,12 +20,12 @@ const Orders = ({token}) => {
         setOrders(response.data.orders.reverse())
        }
        else{
-        toast.error(error.message)
+        toast.error(response.data.message || 'Failed to fetch orders')
        }
 
      } catch (error) {
       console.log(error);
-      toast.error(error.message)
+      toast.error(error.message || 'An error occured')
       
      }
 
