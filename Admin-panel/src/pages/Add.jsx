@@ -106,7 +106,7 @@ const onSubmitHandler= async (e) => {
               <option value="Cameras">Cameras</option>
               <option value="Mobiles">Mobiles</option>
               <option value="Speakers">Speakers</option>
-              <option value="Mouses">Mouses</option>
+              <option value="Mouse">Mouses</option>
               <option value="Watches">Watches</option>
             </select>
           </div>
