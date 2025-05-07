@@ -7,7 +7,6 @@ const Navbar = () => {
 
   const [visible,setVisible]= useState(false);
 
-  const [isDarkMode, setIsDarkMode] = useState(false); // For dark mode state
 
   const {setShowSearch ,getCartCount,navigate,setToken,setCartItems,token} = useContext(ShopContext);
 

@@ -35,7 +35,7 @@ const Cart = () => {
       setcartData(tempData);
 
     }
-
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }, [cartItems, products])
 
   return (

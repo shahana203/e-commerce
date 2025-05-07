@@ -50,6 +50,7 @@ const Orders = () => {
 
   useEffect(()=>{
 loadOrderData()
+window.scrollTo({ top: 0, behavior: 'smooth' });
   },[token])
 
   return (
